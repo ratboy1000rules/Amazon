@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="images/money.ico"/>
+    <title>Sign up</title>
+  </head>
+    <body style="background-color: black">
+        <form id="forms" name="form" style="align-items: center; text-align: center; padding-top: 200px;">
+            <div id="re" style="font-size: 1.5rem; color:white">Register</div>
+            <hr style="visibility: hidden;">
+            <label style="margin-left:-100px; color: white;"id="un" for="username">Username:</label><br>
+            <input  style="border-radius: 20px; padding: 10px; border: 1px solid grey; outline: none;" value="" placeholder="Your Username" type="text" id="username" name="username"><br>
+            <div id="p" style="text-align: center; color:red; font-size: 1rem; display: none;">Username Cannot be Empty</div>
+            <label style="margin-left:-100px; color: white" id="pwd"for="pwd">Password:</label><br>
+            <input minlength="6" style= "border-radius: 20px; border: 1px solid grey; outline: none; padding: 10px" value="" placeholder="Your Password" type="password" id="password" name="password">
+            <div id="div" style="text-align: center; color:red; display: none;">Password Cannot be Empty</div>
+            <div id="pass" style="margin-left:-20px; color:red; display: none;">Password is Too Short!</div>
+        </form>
+        <hr style="visibility: hidden;">
+        <button onclick="return sign()" id="button" style="font-size: 1.5rem; border: 3px solid grey; margin-right: auto; border-radius: 1rem; background-color: grey; width: 190px;
+        color: white; cursor: pointer; margin-left: 620px;">Register</button>
+        <div id="style" style="display: none;">
+          <div class="row">
+            <div class="column">
+              <a href="e2.html"><img src="earth.png" style="width:50%" id="b"><div id="price">Earth for $10.99</div></a>
+            </div>
+            <div class="column">
+              <a href="youtube.html"><img src="you.png" id="d" style="width:50%"><div id="p">YOUTUBE FOR SALE: $694.20</div></a>
+            </div>
+            <a href="gal2.html"><img  src="gal.jpg" id="c"><div id="pri">A Random Galaxy: $50,000,000,000</div></a>
+            <div class="column">
+              <a href="iss2.html"><img src="iss.jpg" id="pic" style="width:50%"><div id="i">The ISS only for $6,942,000,000</div></a>
+            </div>
+          <a href="b2.html"><img src="BEANS.png" id="beans" style="width: 200px"><div id="bea">Can of BEANS: 1 trillion dollars</div></a>
+        </div>
+      </body>
+    <script>
+const p = document.getElementById("p")
+const div = document.getElementById("div")
+const forms = document.getElementById("forms")
+const pass = document.getElementById("pass")
+const but = document.getElementById("button")
+const sty = document.getElementById("style")
+function sign(){
+  const username = document.getElementById("username").value
+  const password = document.getElementById("password").value
+  if(username == ""){
+    p.style.display = "block"
+    return false
+  }
+  if(password.length<6){
+    pass.style.display = "block"
+  }
+  else if(password == ""){
+    div.style.display = "block"
+  }
+  else{
+    div.style.display = "none"
+    p.style.display = "block"
+    p.innerText = "welcome " + username
+    p.style.textAlign = "right"
+    p.style.color = "white"
+    p.style.color = "white"
+    forms.style.display = "none"
+    but.style.display = "none"
+    sty.style.display = "block"
+    localStorage.setItem("username",username,"password",password);
+    setTimeout(function(){window.location.replace("nm.html")},420)
+    return true
+  }
+}
+  </script>
+</html>

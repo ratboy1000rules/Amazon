@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="images/money.ico"/>
+    <title>The ISS</title>
+  </head>
+  <body id="body">
+      <img src="iss.jpg" style="margin-left: 570px;" id="pic">
+	  <div id="desc"style="font-size: 1.5rem; text-align: center;">The ISS also know as the international space station is a station in space</div>
+      <div id="shuts" style="font-size: 1.5rem; cursor: pointer; text-align: center;">Proceed to Checkout </div>
+      <div id="shut"  style="font-size: 1.5rem; display: none; text-align: center;">Your order will be delivered</div>
+		<div><a id="fixin" href="index.html"><button id="back" style="text-decoration: none; margin-left:580px;">Back to home</button></a></div>
+		<style>
+			#shuts:hover{
+				text-decoration: underline;
+				color: red;
+			}
+			#back{
+				padding: 0.5rem 2rem;
+				font-size: 2rem;
+				border: 3px solid black;
+				margin-right: auto;
+				border-radius: 1rem;
+				background-color: black;
+				display: none;
+				color: white;
+				text-decoration: none;
+				margin-top: 24px;
+			}
+			#fixin{
+				margin-left: 0px;
+				text-decoration: none;
+			}
+			#shut{
+				margin-top: 20px
+			}
+			#back:hover{
+				cursor: pointer;
+			}
+			#pic{
+				width: 20%;
+			}
+		</style>
+		<script>
+			const shuts = document.querySelector("#shuts")
+			const shut = document.querySelector("#shut")
+			const back = document.querySelector("#back")
+			shuts.addEventListener('click', () =>{
+				shut.style.display = "block"
+				back.style.display = "block"
+				shuts.style.display = "none"
+			})
+		</script>
+   </body>
+</html>

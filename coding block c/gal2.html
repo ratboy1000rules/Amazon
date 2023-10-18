@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="images/money.ico"/>
+	<title>A Random Galaxy</title>
+  </head>
+  <body style="background-color: black;">
+      <img  src="gal.jpg" style="margin-left: 570px;" id="c">
+	  <div style="color: white; font-size: 1.5rem; text-align: center;">If you chose to buy this then you will get a random galaxy. So you could get the Milky Way or the Adromeda galaxy etc.</div>
+	  <div id="shuts" style="font-size: 1.5rem; cursor: pointer; color: white; text-align: center;">Proceed to Checkout </div>
+      <div id="shut"  style="color: white; font-size: 1.5rem; display: none; text-align: center;">Your order will be delivered</div>
+	  <div><a id="fixin" href="nm.html"><button id="back" style="background-color: grey; text-decoration: none; margin-left:580px;">Back to home</button></a></div>
+	</body>
+		<style>
+			#shuts:hover{
+				text-decoration: underline;
+				color: purple;
+			}
+			#back{
+				padding: 0.5rem 2rem;
+				font-size: 2rem;
+				border: 3px solid black;
+				margin-right: auto;
+				border-radius: 1rem;
+				background-color: black;
+				display: none;
+				color: white;
+				text-decoration: none;
+				margin-top: 24px;
+			}
+			#fixin{
+				margin-left: 0px;
+				text-decoration: none;
+			}
+			#shut{
+				margin-top: 20px
+			}
+			#back:hover{
+				cursor: pointer;
+			}
+			#c{
+				width: 20%
+			}
+			#pri{
+				font-size: 1.5rem;
+			}
+		</style>
+		<script>
+			const shuts = document.querySelector("#shuts")
+			const shut = document.querySelector("#shut")
+			const back = document.querySelector("#back")
+			shuts.addEventListener('click', () =>{
+				shut.style.display = "block"
+				back.style.display = "block"
+				shuts.style.display = "none"
+			})
+		</script>
+   </body>
+</html>

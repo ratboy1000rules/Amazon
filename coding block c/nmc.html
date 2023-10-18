@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<title>amazon</title>
+    <link rel="icon" type="image/x-icon" href="images/money.ico"/>
+  </head>
+  <body style="background-color: black;">
+        <div class="container" style="cursor: pointer;">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <hr style="height: 100px; visibility: hidden;">
+        <a href="stu.html" id="page">About Us</a>
+        <hr style="height: 70px; visibility: hidden;">
+        <a href="index.html" id="dark">Light Mode</div>
+        <hr style="height: 20px; visibility: hidden;">
+        <div id="signs"><a href="nms.html" id="sign">Register</a></div>
+        <hr style="height: 100px; visibility: hidden;">
+        <div id="backs"><a href="nm.html" id="back" style="text-decoration: none;">Back to Home</a></div>
+    </body> 
+		<style>
+            #page{
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: white;
+                margin-left: 660px;
+                position: fixed;;
+            }
+            #anchor{
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: white;
+                margin: 1000px;               
+            }
+            #back{
+				font-size: 1.5rem;
+                color: white;
+                margin-left: 650px;
+			}
+            #backs{
+                margin-left: 7px;
+                margin-top: -40px;
+            }
+            #back:hover{
+                color: purple;
+                text-decoration: underline;
+            }
+            #dark{
+                font-size: 1.5rem;
+                margin: 660px;
+                text-decoration: none;
+                color: white;
+                }
+            #dark:hover{
+                text-decoration: underline;
+                color: purple;
+                cursor: pointer;
+            }
+            #signs{
+                margin-top: 5px;
+                margin-left: -725px;
+            }    
+            #sign{
+                font-size: 1.5rem;
+                
+                padding: 5rem;
+                text-decoration: none;
+                color: white
+                }
+            #sign:hover{
+                text-decoration: underline;
+                color: purple;
+                cursor: pointer;
+            }        
+            #page:hover{
+                text-decoration: underline;
+                color: purple;
+                cursor: pointer;
+            }
+        
+            .container.change{
+                display: inline-block;
+                cursor: pointer;
+            }
+
+
+            .bar1, .bar2, .bar3{
+                width: 35px;
+                height: 5px;
+                background-color: #333;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            
+            /* Rotate first bar */
+            .bar1.change {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+                transform: rotate(-45deg) translate(-9px, 6px) ;
+            }
+            
+            /* Fade out the second bar */
+                .bar2.change {
+                opacity: 0;
+            }
+            
+            /* Rotate last bar */
+            .bar3.change {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+                transform: rotate(45deg) translate(-8px, -8px) ;
+            }
+
+		</style>
+		<script>
+            const bar1 = document.querySelector(".bar1")
+            const bar2 = document.querySelector(".bar2")
+            const bar3 = document.querySelector(".bar3")
+            const con = document.querySelector(".container")
+            const back = document.querySelector("#back")
+            const page = document.querySelector("#page")
+            const dark = document.querySelector("#dark")
+            const body = document.querySelector("#body")
+
+            let menu = false
+            bar1.classList.add("change")
+            bar2.classList.add("change")
+            bar3.classList.add("change")
+            con.addEventListener('click', () =>{  
+                if(!menu){
+                bar2.classList.remove("change")
+                bar1.classList.remove("change")
+                bar3.classList.remove("change")
+                menu = true
+                page.style.visibility = "hidden"
+                back.style.visibility = "hidden"
+                dark.style.visibility = "hidden"
+                sign.style.visibility = "hidden"
+                setTimeout(function(){window.location.replace("nm.html")},420)}
+                else{
+                bar1.classList.add("change")
+                bar2.classList.add("change")
+                bar3.classList.add("change")
+                menu = false
+                page.style.visibility = "visible"
+                back.style.visibility = "visible"
+                dark.style.visibility = "visible"
+                sign.style.visibility = "visible"}
+            })
+            dark.addEventListener('click', () =>{
+                body.style.background = "black"
+                body.style.color = "white"
+            })
+		</script>
+   </body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="images/money.ico"/>
+    <title>Sign up</title>
+  </head>
+    <body>
+        <form id="forms" name="form" style="align-items: center; text-align: center; padding-top: 200px;">
+            <div id="re" style="font-size: 1.5rem;">Register</div>
+            <hr style="visibility: hidden;">
+            <label style="margin-left:-100px"id="un"for="username">Username:</label><br>
+            <input style="border-radius: 20px; padding: 10px; border: 1px solid grey; outline: none;" value="" placeholder="Your Username" type="text" id="username" name="username"><br>
+            <label style="margin-left:-100px" id="pwd"for="pwd">Password:</label><br>
+            <input minlength="6" style= "border-radius: 20px; border: 1px solid grey; outline: none; padding: 10px" value="" placeholder="Your Password" type="password" id="password" name="password">
+            <div id="div" style="text-align: center; color:red; display: none;">Password Cannot be Empty</div>
+            <div id="pass" style="margin-left:-20px; color:red; display: none;">Password is Too Short!</div>
+        </form>
+        <span style="visibility: hidden;" id="wel">welcome</span>
+        <div id="p" style="text-align: center; color:red; font-size: 1rem; display: none;">Username Cannot be Empty</div>
+        <hr style="visibility: hidden;">
+        <button onclick="return sign()" id="button" style="font-size: 1.5rem; border: 3px solid black; margin-right: auto; border-radius: 1rem; background-color: black; width: 190px;
+        color: white; cursor: pointer; margin-left: 620px;">Register</button>
+      </body>
+    <script>
+const p = document.getElementById("p")
+const div = document.getElementById("div")
+const forms = document.getElementById("forms")
+const pass = document.getElementById("pass")
+const but = document.getElementById("button")
+const sty = document.getElementById("style")
+function sign(){
+  const username = document.getElementById("username").value
+  const password = document.getElementById("password").value
+  if(username == ""){
+    p.style.display = "block"
+    return false
+  }
+  if(password == ""){
+    pass.style.display = "block"
+    return false
+  }
+  else{
+    div.style.display = "none"
+    forms.style.display = "none"
+    but.style.display = "none"
+    localStorage.setItem("username",username,"password",password);
+    setTimeout(function(){window.location.replace("index.html")},420)
+    return true
+  }
+}
+  </script>
+  <style>
+  </style>
+</html>

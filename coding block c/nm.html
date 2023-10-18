@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="af">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>amazon</title>
+    <link rel="icon" type="image/x-icon" href="images/money.ico"/>
+  </head>
+  <body style="margin:0; background-color: black">
+    <span style="visibility: hidden">Suma Luma Duma Luma, You're Assumin' I'm A human, what I got to
+      Get it through to you I'm superhuman, Innovative and I'm made  so that anything you say is ricocheting off of me and it'll glue to you, I'm never stating more than</span><span style="color: white">welcome </span><span id="diver">null</span>
+    <img style="margin-top: -60px" src="log.png" id="log">
+    <input style="margin-left: 570px"type="text" value="" placeholder="Search..." id="my" onchange="search()">
+      <div style="cursor: pointer" class="container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="e2.html"><img src="earth.png" style="width:50%" id="b"><div id="price">Earth for $10.99</div></a>
+        </div>
+        <div class="column">
+          <a href="youtube.html"><img src="you.png" id="d" style="width:50%"><div id="p">YOUTUBE FOR SALE: $694.20</div></a>
+        </div>
+        <a href="gal2.html"><img  src="gal.jpg" id="c"><div id="pri">A Random Galaxy: $50,000,000,000</div></a>
+        <div class="column">
+          <a href="iss2.html"><img src="iss.jpg" id="pic" style="width:50%"><div id="i">The ISS only for $6,942,000,000</div></a>
+        </div>
+      <a href="b2.html"><img src="BEANS.png" id="beans" style="width: 200px"><div id="bea">Can of BEANS: 1 trillion dollars</div></a>
+    </div>
+    </body>
+    <a href="stuff.html" id="page">About</a><a id="anchor"href="stuff.html" style="display: none;">Us</a>
+    <div id="white">Light Mode</div>
+    <style>
+
+.container.change{
+    display: inline-block;
+    cursor: pointer;
+  }
+
+
+  .bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  ::-webkit-scrollbar{
+    opacity: 0%;
+  }
+  /* Rotate first bar */
+  .bar1.change {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+    .bar2.change {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+   .bar3.change {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+.container .open{  
+  animation: con 1000s
+}
+#d{
+    width: 20%;
+    display: block;
+    cursor: pointer;
+    margin-left: 30px;
+}
+#log{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    cursor: pointer;
+}
+#b{
+    display: block;
+    margin-right: auto;
+    width: 20%;
+    cursor: pointer;
+}
+#sp{
+    font-size: 1.5rem;
+    visibility: hidden;
+    color: white
+}
+#p{
+    font-size: 1.5rem;
+    color: white
+}
+#page{
+    font-size: 1.5rem;
+    visibility: hidden;
+    text-decoration: none;
+}
+#page:hover{
+  text-decoration: underline;
+  color: purple;
+  cursor: pointer;
+}
+#price{
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 31px;
+}
+#c{
+    display: block;
+    margin-right: auto;
+    width: 20%;
+    cursor: pointer;
+}
+#pri{
+    font-size: 1.5rem;
+    color: white
+}
+
+#dark{
+   font-size: 1.5rem;
+   visibility: hidden;
+   text-align: center;
+   align-items: center;
+   padding: 5rem
+}
+#dark:hover{
+    text-decoration: underline;
+    color: purple;
+    cursor: pointer;
+}
+#idk{
+   font-size: 1.5rem;
+   text-align: center;
+}
+body{
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+#pic{
+    width:20%;
+    display: block;
+    cursor: pointer;
+    margin-left: 35px;
+}
+#i{
+    font-size: 1.5rem;
+    color: white
+}
+#log{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    cursor: pointer;
+}
+    input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-left: 570px;
+    font-size: 17px;
+  }
+  @media screen and (max-width: 600px) {
+    input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #beans{
+    width: 20%;
+    cursor: pointer;
+  }
+#bea{
+    font-size: 1.5rem;
+    margin-left: 970px;
+    color: white;
+    margin-left: 900px;  
+}
+a{
+    text-decoration: none;
+    cursor: text;
+    color: black;
+}
+#back{
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    border: 3px solid black;
+    margin-right: auto;
+    border-radius: 1rem;
+    background-color: black;
+    display: none;
+    color: white;
+}
+    </style>
+    <script>
+const back = document.querySelector("#back")
+const pri = document.querySelector("#pri")
+const price = document.querySelector("#price")
+const p = document.querySelector("#p")
+const page = document.querySelector("#page")
+const bar1 = document.querySelector(".bar1")
+const bar2 = document.querySelector(".bar2")
+const bar3 = document.querySelector(".bar3")
+const con = document.querySelector(".container")
+const idk = document.querySelector("#idk")
+const i = document.querySelector("#i")
+const lo = document.querySelector("#log")
+const a = document.querySelector("#a")
+const bea = document.querySelector("#bea")
+const iss = document.querySelector("#iss")
+const beans = document.querySelector("#beans")
+const diver = document.getElementById("diver")
+let menu = false;
+let error = true;
+diver.innerHTML = localStorage.getItem("username","password")
+diver.style.color = "white"
+page.addEventListener('click', () =>{
+    idk.style.visibility = "visible"
+})
+con.addEventListener('click', () =>{  
+    if(!menu){
+      bar1.classList.add("change")
+      bar2.classList.add("change")
+      bar3.classList.add("change")
+      menu = true
+      setTimeout(function(){window.location.replace("nmc.html")},420)
+    }
+    else{
+      bar2.classList.remove("change")
+      bar1.classList.remove("change")
+      bar3.classList.remove("change")
+      menu = false}
+      
+  })
+function search(){
+  var x = document.getElementById("my").value
+  if(x === "earth"){
+    error = true
+    window.location.replace("e2.html")
+  }
+  if(x === "beans" ){
+    error = true
+    window.location.replace("b2.html")
+  }
+  if(x === "galaxy"){
+    error = true
+    window.location.replace("gal2.html")
+  }
+  if(x === "the iss"){
+    error = true
+    window.location.replace("iss2.html")
+  }
+  if(x === "youtube"){
+    error = true
+    window.location.replace("youtube.html")
+  }
+  else if(x === "iss"){
+    error = true
+    window.location.replace("iss2.html")
+  }
+  else if(x === "can of beans"){
+    error = true
+    window.location.replace("b2.html")
+  }
+  else{
+    error == true
+    if(error == false){window.location.replace("nme.html")}
+  }
+}
+
+    </script>
+</html>
